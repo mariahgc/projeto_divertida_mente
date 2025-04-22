@@ -66,6 +66,38 @@
     margin: 8px;
     transition: 0.3s;
   }
+
+  .card img {
+    /* Ajuste a posição da imagem para ficar mais para baixo dentro do card */
+    position: relative; /* Para poder usar top */
+    top: 20px; /* Move a imagem para baixo */
+    z-index: 1; /* Garantir que a imagem fique atrás de outros elementos, se necessário */
+    width: 100%; /* Ajuste da largura */
+    height: auto; /* Mantém a altura proporcional */
+  }
+  
+  .card {
+    width: 28vh;
+    height: 40vh;
+    margin-top: 20px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 30px; /* Adiciona um pouco de espaço interno */
+    transition: transform 0.3s;
+    padding-bottom: 10px; /* Pode adicionar algum espaçamento embaixo também, se necessário */
+  }
+  .card img {
+    position: relative;
+    top: 20px;  /* Ajusta a imagem para descer */
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px; /* Adiciona mais espaçamento abaixo da imagem */
+}
+
   
   @media (max-width: 999px) {
     body {
@@ -767,4 +799,3 @@ transform: scale(1.05);
     width: 500px;
   }
 }
-

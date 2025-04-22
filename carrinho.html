@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Divertidamente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="cards.html">Início</a>
+            <a href="favoritos.html"><i class="fa-solid fa-heart"></i></a>
+        </nav>
+    </header>
+
+    <div id="carrinho-container">
+        <h1>Carrinho</h1>
+        <div id="itens-carrinho"></div>
+    </div>
+
+    <footer>
+        <p>© 2025 Divertidamente</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const carrinhoContainer = document.getElementById('itens-carrinho');
+
+            carrinho.forEach(item => {
+                const divItem = document.createElement('div');
+                divItem.classList.add('item');
+                divItem.innerHTML = `
+                    <img src="${item.imagem}" alt="${item.nome}">
+                    <h2>${item.nome}</h2>
+                    <p>${item.preco}</p>
+                `;
+                carrinhoContainer.appendChild(divItem);
+            });
+        });
+    </script>
+</body>
+</html>
