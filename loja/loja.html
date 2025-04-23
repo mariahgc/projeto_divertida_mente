@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divertidamente</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cards.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<header>
+  <nav>
+      <a class="logo" href="/">Divertidamente</a>
+      <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Camisa</a></li>
+          <li><a href="#">Moletom</a></li>
+          <li><a href="#">Boneco</a></li>
+          <li><a href="#">Almofada</a></li>
+          <li><a href="#">Copo</a></li>
+          <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+          <li><a href="favoritos.html"><i class="fa-solid fa-heart"></i></a></li>
+
+      </ul>
+  </nav>
+</header>
+<body>
+
+  <main>
+  <div class="container">
+
+    <!-- Card 1 -->
+    <div class="item">
+      <div class="imagem-item">
+        <img src="images/moletom-teste.png" alt="Poster 1" class="imagem-produto"
+          data-original="images/moletom-teste.png"
+          data-m="images/moletom-m.png"
+          data-h="images/moletom-h.png" />
+        <div class="icons">
+          <i class="fa-solid fa-bag-shopping" onclick="adicionarAoCarrinho('Poster 1', 'images/moletom-teste.png', 'R$29,99')"></i>
+          <i class="fa-regular fa-heart" onclick="adicionarAosFavoritos('Poster 1', 'images/moletom-teste.png', 'R$29,99')"></i>
+        </div>
+      </div>
+      <div class="informacoes">
+        <h1>Moletom Preto - Alegria</h1>
+        <p>Descrição do produto.</p>
+        <div class="sexo-preco-container">
+        <div class="sexo-options">
+          SEXO:
+          <span onmouseover="mudarSexo(this, 'm')" onmouseout="restaurarImagem(this)">M</span>
+          <span onmouseover="mudarSexo(this, 'h')" onmouseout="restaurarImagem(this)">H</span>
+        </div>
+        <div class="product-price">R$29,99</div></div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="item">
+      <div class="imagem-item">
+        <img src="images/moletom-teste2.png" alt="Poster 2" class="imagem-produto"
+          data-original="images/moletom-teste2.png"
+          data-m="images/moletom-m2.png"
+          data-h="images/moletom-h2.png" />
+        <div class="icons">
+          <i class="fa-solid fa-bag-shopping" onclick="adicionarAoCarrinho('Poster 2', 'images/moletom-teste2.png', 'R$34,99')"></i>
+          <i class="fa-regular fa-heart" onclick="adicionarAosFavoritos('Poster 2', 'images/moletom-teste2.png', 'R$34,99')"></i>
+        </div>
+      </div>
+      <div class="informacoes">
+        <h1>Moletom Preto - Ansiedade</h1>
+        <p>Descrição do produto.</p>
+        <div class="sexo-preco-container">
+        <div class="sexo-options">
+          SEXO:
+          <span onmouseover="mudarSexo(this, 'm')" onmouseout="restaurarImagem(this)">M</span>
+          <span onmouseover="mudarSexo(this, 'h')" onmouseout="restaurarImagem(this)">H</span>
+        </div>
+        <div class="product-price">R$34,99</div></div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="item">
+      <div class="imagem-item">
+        <img src="images/moletom-teste3.png" alt="Poster 3" class="imagem-produto"
+          data-original="images/moletom-teste3.png"
+          data-m="images/moletom-m3.png"
+          data-h="images/moletom-h3.png" />
+        <div class="icons">
+          <i class="fa-solid fa-bag-shopping" onclick="adicionarAoCarrinho('Poster 3', 'images/moletom-teste3.png', 'R$39,99')"></i>
+          <i class="fa-regular fa-heart" onclick="adicionarAosFavoritos('Poster 3', 'images/moletom-teste3.png', 'R$39,99')"></i>
+        </div>
+      </div>
+      <div class="informacoes">
+        <h1>Moletom Preto - Inveja</h1>
+        <p>Descrição do produto.</p>
+        <div class="sexo-preco-container">
+        <div class="sexo-options">
+          SEXO:
+          <span onmouseover="mudarSexo(this, 'm')" onmouseout="restaurarImagem(this)">M</span>
+          <span onmouseover="mudarSexo(this, 'h')" onmouseout="restaurarImagem(this)">H</span>
+        </div>
+        <div class="product-price">R$39,99</div></div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="item">
+      <div class="imagem-item">
+        <img src="images/moletom-teste4.png" alt="Poster 4" class="imagem-produto"
+          data-original="images/moletom-teste4.png"
+          data-m="images/moletom-m4.png"
+          data-h="images/moletom-h4.png" />
+        <div class="icons">
+          <i class="fa-solid fa-bag-shopping" onclick="adicionarAoCarrinho('Poster 4', 'images/moletom-teste4.png', 'R$42,99')"></i>
+          <i class="fa-regular fa-heart" onclick="adicionarAosFavoritos('Poster 4', 'images/moletom-teste4.png', 'R$42,99')"></i>
+        </div>
+      </div>
+      <div class="informacoes">
+        <h1>Moletom Preto - Medo</h1>
+        <p>Descrição do produto.</p>
+        <div class="sexo-preco-container">
+        <div class="sexo-options">
+          SEXO:
+          <span onmouseover="mudarSexo(this, 'm')" onmouseout="restaurarImagem(this)">M</span>
+          <span onmouseover="mudarSexo(this, 'h')" onmouseout="restaurarImagem(this)">H</span>
+        </div>
+        <div class="product-price">R$42,99</div></div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="item">
+      <div class="imagem-item">
+        <img src="images/moletom-teste.png" alt="Poster 5" class="imagem-produto"
+          data-original="images/moletom-teste.png"
+          data-m="images/moletom-m.png"
+          data-h="images/moletom-h.png" />
+        <div class="icons">
+          <i class="fa-solid fa-bag-shopping" onclick="adicionarAoCarrinho('Poster 5', 'images/moletom-teste.png', 'R$49,99')"></i>
+          <i class="fa-regular fa-heart" onclick="adicionarAosFavoritos('Poster 5', 'images/moletom-teste.png', 'R$49,99')"></i>
+        </div>
+      </div>
+      <div class="informacoes">
+        <h1>Moletom Preto - Alegria</h1>
+        <p>Descrição do produto.</p>
+        <div class="sexo-preco-container">
+        <div class="sexo-options">
+          SEXO:
+          <span onmouseover="mudarSexo(this, 'm')" onmouseout="restaurarImagem(this)">M</span>
+          <span onmouseover="mudarSexo(this, 'h')" onmouseout="restaurarImagem(this)">H</span>
+        </div>
+        <div class="product-price">R$49,99</div></div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="item">
+      <div class="imagem-item">
+        <img src="images/moletom-teste.png" alt="Poster 6" class="imagem-produto"
+          data-original="images/moletom-teste.png"
+          data-m="images/moletom-m.png"
+          data-h="images/moletom-h.png" />
+        <div class="icons">
+          <i class="fa-solid fa-bag-shopping" onclick="adicionarAoCarrinho('Poster 6', 'images/moletom-teste.png', 'R$59,99')"></i>
+          <i class="fa-regular fa-heart" onclick="adicionarAosFavoritos('Poster 6', 'images/moletom-teste.png', 'R$59,99')"></i>
+        </div>
+      </div>
+      <div class="informacoes">
+        <h1>Moletom Preto - Alegria</h1>
+        <p>Descrição do produto.</p>
+        <div class="sexo-preco-container">
+        <div class="sexo-options">
+          SEXO:
+          <span onmouseover="mudarSexo(this, 'm')" onmouseout="restaurarImagem(this)">M</span>
+          <span onmouseover="mudarSexo(this, 'h')" onmouseout="restaurarImagem(this)">H</span>
+        </div>
+        <div class="product-price">R$59,99</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+  <footer class="footer">
+    <div class="container-footer">
+        <div class="row">
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="#">Telefone: (00) 00000-0000</a></li>
+                    <li><a href="#">Fulano@gmail.com</a></li>
+
+    
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Endereço</h4>
+                <ul>
+                    <li><a href="#">Joinville-SC</a></li>
+                    <li><a href="#">bairro fulano 00, Rua detal</a></li>
+    
+                </ul>
+            </div>
+             <div class="footer-col">
+                <h4>Contribuidores</h4>
+                <ul>
+                    <li><a href="#">Maria Helena</a></li>
+                    <li><a href="#">Gustavo</a></li>
+                   
+    
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nos siga</h4>
+                <div class="social-links">
+                <ul>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    
+    
+                </ul>
+            </div>
+            </div>
+            
+            
+    
+    
+        </div>
+    </div>
+    </footer>
+
+  <script>
+    function mudarSexo(elemento, sexo) {
+      const img = elemento.closest(".item").querySelector("img");
+      img.src = img.dataset[sexo];
+    }
+
+    function restaurarImagem(elemento) {
+      const img = elemento.closest(".item").querySelector("img");
+      img.src = img.dataset.original;
+    }
+
+    function adicionarAoCarrinho(nome, imagem, preco) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const existente = cart.find(item => item.name === nome);
+      if (existente) {
+        existente.quantity += 1;
+      } else {
+        cart.push({ name: nome, image: imagem, price: preco, quantity: 1 });
+      }
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`${nome} adicionado ao carrinho!`);
+    }
+
+    function adicionarAosFavoritos(nome, imagem, preco) {
+      let favs = JSON.parse(localStorage.getItem("favoritos")) || [];
+      if (!favs.some(item => item.name === nome)) {
+        favs.push({ name: nome, image: imagem, price: preco });
+        localStorage.setItem("favoritos", JSON.stringify(favs));
+        alert(`${nome} adicionado aos favoritos!`);
+      } else {
+        alert(`${nome} já está nos favoritos!`);
+      }
+    }
+  </script>
+</body>
+</html>

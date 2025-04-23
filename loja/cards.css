@@ -1,0 +1,196 @@
+/* cards.css */
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, button, input, textarea {
+  font: 400 14px "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Container de todos os cards */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards por linha */
+  gap: 20px;
+  justify-items: center;
+  padding: 30px;
+}
+
+/* Card individual */
+.item {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  max-width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.item:hover {
+  transform: scale(1.02);
+}
+
+/* Imagem */
+.item img {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* Ícones sempre visíveis */
+.icons {
+  position: absolute;
+  top: 7px;
+  right: 18px;
+  display: flex !important;
+  gap: 10px;
+  opacity: 0.8; /* Opacidade inicial mais baixa */
+  transition: opacity 0.3s ease;
+}
+
+.item:hover .icons {
+  opacity: 1; /* Opacidade aumenta no hover */
+}
+
+/* Ícones de carrinho e favorito com hover suave */
+.icons i {
+  font-size: 20px;
+  color: #888;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icons i:hover {
+  transform: scale(1.1); /* Leve aumento no tamanho */
+  color: var(--blue); /* Mudança suave de cor */
+}
+
+/* Título "poster" menor */
+.product-title {
+  font-size: 14px;
+  margin: 8px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Container com sexo e preço lado a lado */
+.sexo-preco-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding: 0 0px;
+  width: 100%;
+}
+
+/* Alinhamento de Nome e Sexo */
+.sexo-preco-container .product-title,
+.sexo-options {
+  text-align: left;
+  flex: 1;
+}
+
+/* Opções de sexo com quadrado */
+.sexo-options span {
+  display: inline-block;
+  padding: 2px 6px;
+  margin-right: 4px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  font-size: 10px;
+}
+
+.sexo-options span:hover {
+  background-color: #888;
+  color: white;
+}
+
+/* Preço */
+.product-price {
+  font-size: 18px;
+  color: var(--red);
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Ações (caso tenha botões) */
+.product-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.product-action-btn {
+  background-color: var(--blue);
+  color: var(--white);
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.product-action-btn:hover {
+  background-color: var(--red);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr); /* Mantém 4 cards por linha */
+  }
+
+  .item {
+    max-width: 200px;
+  }
+
+  .product-title {
+    font-size: 13px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards por linha em telas menores */
+  }
+
+  .item {
+    max-width: 170px;
+  }
+
+  .product-title {
+    font-size: 12px;
+  }
+
+  .product-price {
+    font-size: 12px;
+  }
+}

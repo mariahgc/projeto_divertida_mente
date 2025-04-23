@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="carrinho.js" defer></script>
+</head>
+<body>
+  <header class="main-header">
+    <nav class="main-nav container">
+      <ul class="header-list-container list-container">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="loja.html">Loja</a></li>
+        <li class="nav-item"><a href="sobre.html">Sobre</a></li>
+        <li class="nav-item"><a href="carrinho.html">Carrinho</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <h1 class="movie-title-large movie-title">Carrinho de Compras</h1>
+  </header>
+
+  <main class="main-section container">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+        </tr>
+      </thead>
+      <tbody id="cart-body">
+        <!-- Os produtos serão inseridos via JS -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3" class="cart-total-container">
+            <strong>Total</strong>
+            <span id="cart-total">R$0,00</span>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+    <button type="button" class="purchase-button" onclick="finalizarCompra()">Finalizar Compra</button>
+  </main>
+</body>
+</html>
