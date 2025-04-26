@@ -1,10 +1,13 @@
 /* cards.css */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Rock+Salt&display=swap');
 
 /* Base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
 }
 
 body, button, input, textarea {
@@ -23,10 +26,11 @@ button {
 /* Container de todos os cards */
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 cards por linha */
-  gap: 20px;
+  grid-template-columns: 300px 300px 300px 300px; /* 4 cards por linha */
+  gap: 50px;
   justify-items: center;
   padding: 30px;
+  margin-left: 20vh;
 }
 
 /* Card individual */
@@ -36,7 +40,8 @@ button {
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-  max-width: 250px;
+  width: 300px;
+  height: 500px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -56,6 +61,7 @@ button {
   object-fit: contain;
   border-radius: 8px;
   margin-top: 15px;
+  margin-top: 30px;
 }
 
 /* Ícones sempre visíveis */
@@ -65,8 +71,8 @@ button {
   right: 18px;
   display: flex !important;
   gap: 10px;
-  opacity: 0.8; /* Opacidade inicial mais baixa */
   transition: opacity 0.3s ease;
+  margin-top: 10px;
 }
 
 .item:hover .icons {
@@ -81,7 +87,6 @@ button {
 }
 
 .icons i:hover {
-  transform: scale(1.1); /* Leve aumento no tamanho */
   color: var(--blue); /* Mudança suave de cor */
 }
 
@@ -116,11 +121,13 @@ button {
   padding: 2px 6px;
   margin-right: 4px;
   border: 1px solid #888;
+  
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s, color 0.3s;
   font-size: 10px;
 }
+
 
 .sexo-options span:hover {
   background-color: #888;
@@ -130,7 +137,7 @@ button {
 /* Preço */
 .product-price {
   font-size: 18px;
-  color: var(--red);
+  color: #333333d7;
   margin: 0;
   font-weight: bold;
 }
@@ -194,3 +201,16 @@ button {
     font-size: 12px;
   }
 }
+
+
+.informacoes h1{
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-top: 10px;
+  
+}
+
+.informacoes p{
+  margin-top: 10px;
+}
+
