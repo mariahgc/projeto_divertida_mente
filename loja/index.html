@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moletom P Alegria</title>
+    <!--VUE CDN-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="cart">Cart: {{ cart }}</div>
+        <div class="product-display">
+            <div class="product-container">
+                <div class="product-image">
+                    <!-- IMAGEM DO PRODUTO-->
+                    <img :src="image" alt="img-product">
+                </div>
+                <div class="product-info">
+
+                    <!--INFO DO PRODUTO-->
+                    <h1>{{ product_title + " " + brand }}</h1>
+                    <p v-if="inStock > 10">Em estoque</p>
+                    <p v-else-if="inStock < 10 && inStock > 1">Quase fora</p>
+                    <p v-else>Fora de estoque</p>
+                    <ul>
+                        <li v-for="detail in details">
+                            {{ detail }}
+                        </li>
+                    </ul>
+
+                    <!-- Seção de Tamanho -->
+                     <h2>Tamanho:</h2>
+                    <div class="sizes">
+                        <button class="size-button">PPP</button>
+                        <button class="size-button">PP</button>
+                        <button class="size-button">P</button>
+                        <button class="size-button">M</button>
+                        <button class="size-button">G</button>
+                        <button class="size-button">2G</button>
+                        <button class="size-button">3P</button>
+                        <button class="size-button">4P</button>
+
+                    </div>
+
+                    <div v-for="variant in variants"
+                        :key="variant.id"
+                        @mouseover="changeImage(variant.image)"
+                        class="gender-circle">
+                        {{ variant.gender }}
+                    </div>
+
+                    <button class="button" :class="{ disabledButton: inStock < 1 }" @click="addToCart" :disabled="inStock < 1">Adicionar Ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="texto">
+    <p>Nossos moletons EMOÇÕES são quentes, macios e de altíssima qualidade. Com modelagem unissex, capuz e bolsos estilo canguru ou laterais, garantem conforto e estilo nos dias frios. As estampas exclusivas são aplicadas com tecnologia avançada para máxima durabilidade. Produção sob demanda, envio em 15 a 20 dias úteis (mais o prazo da transportadora). Lolja – Vista o Extraordinário!</p>
+    </div>
+
+    <div class="tabela">
+        <img src="images/tabela-moletom.png" alt="tabela" class="imagem-tabela">
+    </div>
+    <script>
+        const { createApp, ref } = Vue
+
+        createApp({
+            setup() {
+                const cart = ref(0);
+                const addToCart = () => {
+                    cart.value += 1
+                }
+                const image = ref("images/moletom-teste.png");
+                const changeImage = (variantImage) => {
+                    image.value = variantImage
+                }
+                return {
+                    product_title: ref('Moletom Preto'),
+                    brand: 'Alegria',
+                    image,
+                    inStock: ref(50),
+                    details: ['60% algodão', '30% poliéster', '10% lã'],
+                    variants: [
+                        { id: 1, gender: 'M', image: "images/moletom-h.png" },
+                        { id: 2, gender: 'F', image: "images/moletom-m.png" }
+                    ],
+                    cart,
+                    addToCart,
+                    changeImage
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+<script>
+    function mudarSexo(elemento, sexo) {
+        const img = elemento.closest(".item").querySelector("img");
+        img.src = img.dataset[sexo];
+    }
+
+    function restaurarImagem(elemento) {
+        const img = elemento.closest(".item").querySelector("img");
+        img.src = img.dataset.original;
+    }
+</script>
+
+</html>
