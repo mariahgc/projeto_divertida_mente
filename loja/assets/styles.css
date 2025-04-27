@@ -13,13 +13,13 @@ body {
 }
 
 
-.sizes{
+.sizes {
   display: flex;
   margin-top: 30px;
   gap: 5px;
 }
 
-.sizes button{
+.sizes button {
   width: 50px;
   border-radius: 50px;
   height: 30px;
@@ -35,19 +35,43 @@ body {
   color: #fff;
 }
 
-.button {
-  margin: 20px;
-  background-color: #763FA3;
-  border-radius: 5px;
-  font-size: 18px;
-  width: 160px;
-  height: 60px;
-  color: white;
-  padding: 10px;
 
-  text-align: center;
-  cursor: pointer;
+
+.botoes-compra {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
+
+.botoes-compra button {
+  width: 250px;
+  height: 40px;
+  border: #200035 solid 2px;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 1rem;
+  font-weight: 600;
+  transition: 1s ease;
+
+}
+
+.botao-compra {
+  background-color: #200035;
+  color: #f9f9f9;
+  transition: 1s ease;
+}
+
+.botao-compra:hover {
+  background-color: #200035ae;
+  color: #000;
+}
+
+.button:hover {
+  background-color: #200035;
+  color: #f9f9f9;
+}
+
+
 
 .cart {
   margin: 25px 50px;
@@ -55,14 +79,14 @@ body {
   border-radius: 20px;
   width: 100px;
   height: 40px;
-  
+
   text-align: center;
   background-color: white;
 
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.cart p{
+.cart p {
   margin-top: 10px;
   font-size: 1rem;
   margin-left: 20px;
@@ -70,14 +94,14 @@ body {
   width: 60px;
 }
 
-.product-info p{
+.product-info p {
   margin-top: 30px;
   font-weight: 350;
   font-size: 1rem;
   color: #333333d7;
 }
 
-.product-info ul{
+.product-info ul {
   margin-top: 30px;
   font-weight: 350;
   font-size: 1rem;
@@ -86,16 +110,24 @@ body {
 
 
 .gender-circle {
+  display: inline-block;
   width: 40px;
   height: 40px;
-  border: 1px solid #000;
+  line-height: 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  cursor: pointer;
+  text-align: center;
   margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.gender-circle:hover {
+  background-color: #200035;
+  color: #f9f9f9;
+  transition: .5s ease;
 }
 
 
@@ -108,24 +140,62 @@ body {
   background-color: #d8d8d8;
   cursor: not-allowed;
 }
+
 .texto {
-  background-color: #f9f9f9;  /* Fundo suave */
-  padding: 20px;              /* Espaço interno para separar o texto das bordas */
-  margin-top: 30px;           /* Espaço superior */
-  font-family: Arial, sans-serif; /* Fonte legível */
-  color: #333;                /* Cor de texto escura para boa legibilidade */
-  border-radius: 8px;         /* Bordas arredondadas para suavizar o visual */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves para dar profundidade */
-  line-height: 1.6;           /* Aumento do espaçamento entre linhas para facilitar a leitura */
-  max-width: 800px;           /* Largura máxima para não esticar muito em telas grandes */
-  margin-left: auto;          /* Centralizar o conteúdo */
-  margin-right: auto;         /* Centralizar o conteúdo */
+  background-color: #200035;
+  padding: 20px;
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+  color: #fff; /* Melhor para contrastar no fundo roxo escuro */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+  width: 97%;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* já centraliza tudo que for texto */
+  gap: 140px;
 }
 
 .texto p {
-  font-size: 16px;            /* Tamanho da fonte legível */
-  text-align: justify;        /* Alinhar o texto para melhorar a apresentação */
-  margin-bottom: 20px;        /* Espaço inferior para separar de outros elementos */
+  font-size: 1rem;
+  width: 500px;
+  margin: 0; /* tira margin-bottom pra não desalinhar */
+  font-weight: 200;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.texto h2{
+  width: 400px;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.texto h2 {
+  display: inline-block;
+  position: relative;
+  color: #fff; /* ou a cor que quiser */
+  cursor: pointer;
+}
+
+.texto h2::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ff6600; /* cor da linha */
+  transition: width 0.4s ease; /* duração e suavidade */
+}
+
+.texto h2:hover::after {
+  width: 100%;
 }
 
 h1 {
@@ -136,12 +206,7 @@ h3 {
   font-size: 25px;
 }
 
-img {
-  width: 70%;
-  margin: 40px;
-  padding: 15px;
- 
-}
+
 
 input {
   width: 100%;
@@ -154,9 +219,7 @@ label {
   margin-bottom: 5px;
 }
 
-l
-
-.nav-bar {
+l .nav-bar {
   background: linear-gradient(-90deg, #84cf6a, #16c0b0);
   height: 60px;
   margin-bottom: 25px;
@@ -166,7 +229,7 @@ l
 }
 
 .out-of-stock-img {
-  opacity:0.5
+  opacity: 0.5
 }
 
 p {
@@ -178,39 +241,39 @@ p {
   flex-direction: column;
   padding: 1rem;
 }
+
 .product-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-top: 100px;
+  margin-top: 30px;
+  margin-left: 10vh;
 }
 
-.product-image {
-  display: grid;
-  grid-template-columns: 390px 360px ;
-  margin-left: 75px;
-  gap: 10px;
-}
 
-.product-image img{
-  height: 460px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  
+
+
+img {
+  width: 600px;
+  margin: 40px;
+  padding: 15px;
+  height: auto;
+
 }
 
 .product-info {
-  width: 500px ; /* outra metade */
   margin-left: 35px;
 }
 
-.product-info h1{
+.product-info h1 {
   font-weight: 600;
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
+  margin-top: 60px;
 }
+
+
 
 .review-form {
   display: flex;
@@ -263,17 +326,18 @@ textarea {
 ul {
   list-style-type: none;
 }
+
 .tabela {
-  text-align: center; /* Centraliza o conteúdo da tabela */
-  margin-top: 30px;    /* Distância do topo para separar dos outros elementos */
+  text-align: center;
+  margin-top: 30px;
 }
 
 .imagem-tabela {
-  width: 100%;         /* A imagem ocupa toda a largura disponível */
-  max-width: 800px;    /* Limita a largura da imagem para não ficar muito grande */
-  height: auto;        /* Mantém a proporção da imagem */
-  border-radius: 8px;  /* Bordas arredondadas para suavizar a imagem */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves para dar profundidade */
+  width: 90vh;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (max-width: 600px) {
