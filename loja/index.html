@@ -4,29 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moletom P Alegria</title>
     <!--VUE CDN-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+    <title class="titulo">Moletom P Alegria</title>
 
     <div id="app">
-        <div class="cart">Cart: {{ cart }}</div>
+        <div class="cart"><p>Cart: {{ cart }}</p></div>
         <div class="product-display">
             <div class="product-container">
                 <div class="product-image">
                     <!-- IMAGEM DO PRODUTO-->
                     <img :src="image" alt="img-product">
+                    <img src="images/moletom-verso.webp" alt="">
                 </div>
                 <div class="product-info">
 
                     <!--INFO DO PRODUTO-->
                     <h1>{{ product_title + " " + brand }}</h1>
                     <p v-if="inStock > 10">Em estoque</p>
+                    
                     <p v-else-if="inStock < 10 && inStock > 1">Quase fora</p>
                     <p v-else>Fora de estoque</p>
                     <ul>
@@ -36,16 +41,12 @@
                     </ul>
 
                     <!-- Seção de Tamanho -->
-                     <h2>Tamanho:</h2>
                     <div class="sizes">
-                        <button class="size-button">PPP</button>
                         <button class="size-button">PP</button>
                         <button class="size-button">P</button>
                         <button class="size-button">M</button>
                         <button class="size-button">G</button>
                         <button class="size-button">2G</button>
-                        <button class="size-button">3P</button>
-                        <button class="size-button">4P</button>
 
                     </div>
 
@@ -82,7 +83,7 @@
                     image.value = variantImage
                 }
                 return {
-                    product_title: ref('Moletom Preto'),
+                    product_title: ref('Moletom'),
                     brand: 'Alegria',
                     image,
                     inStock: ref(50),
