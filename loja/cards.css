@@ -1,411 +1,55 @@
-/* cards.css */
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&family=Rock+Salt&display=swap');
-
-/* Base styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-
-}
-
-body,
-button,
-input,
-textarea {
-  font: 400 14px "Roboto", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-/* Container de todos os cards */
-.container {
-  display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  /* 4 cards por linha */
-  gap: 50px;
-  justify-items: center;
-  padding: 30px;
-  margin-left: 6vh;
-}
-
-/* Card individual */
+/* Posiciona o ícone dentro do card e em cima da imagem */
 .item {
-  background-color: #fff;
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
-  width: 290px;
-  height: 500px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    padding: 20px 30px 30px 30px;
-}
-
-.item:hover {
-  transform: scale(1.02);
-}
-
-/* Imagem */
-.item img {
-  width: 100%;
-  height: auto;
-  max-height: 220px;
-  object-fit: contain;
-  border-radius: 8px;
-  margin-top: 15px;
-  margin-top: 30px;
-}
-
-/* Ícones sempre visíveis */
-.icons {
-  position: absolute;
-  top: 7px;
-  right: 18px;
-  display: flex !important;
-  gap: 10px;
-  transition: opacity 0.3s ease;
-  margin-top: 10px;
-}
-
-.item:hover .icons {
-  opacity: 1;
-  /* Opacidade aumenta no hover */
-}
-
-/* Ícones de carrinho e favorito com hover suave */
-.icons i {
-  font-size: 20px;
-  color: #888;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.icons i:hover {
-  color: var(--blue);
-  /* Mudança suave de cor */
-}
-
-/* Título "poster" menor */
-.product-title {
-  font-size: 14px;
-  margin: 8px 0;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Container com sexo e preço lado a lado */
-.sexo-preco-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 8px;
-  padding: 0 0px;
-  width: 100%;
-}
-
-/* Alinhamento de Nome e Sexo */
-.sexo-preco-container .product-title,
-.sexo-options {
-  text-align: left;
-  flex: 1;
-}
-
-/* Opções de sexo com quadrado */
-
-.sexo-options span {
-  display: inline-block;
-  padding: 2px 6px;
-  width: 30px;
-  height: 20px;
-  margin-left: 10px;
-  margin-top: 8px;
-  background-color: #f0f0f0;
-  border-radius: 70px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-  font-size: 10px;
-}
-
-.sexo-options span p {
-  text-align: center;
-  margin-top: -2px;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  color: #000000;
-
-}
-
-.sexo-options {
-  display: flex;
+    position: relative; /* Faz com que o ícone seja posicionado em relação ao card */
+  }
   
-}
-
-.sexo-options h2 {
-  margin-top: 5px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #000000;
-}
-
-.sexo-options span:hover {
-  background: #3E2C5B;
-  transition: 1s;
-  color: white;
-}
-
-.sexo-options p:hover{
-  color: #f0f0f0;
-}
-
-/* Preço */
-.product-price {
-  font-weight: 600;
-  color: #333333d7;
-  font-size: 1.4rem;
-  margin-top: 10px;
-}
-
-/* Ações (caso tenha botões) */
-.product-actions {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.product-action-btn {
-  background-color: var(--blue);
-  color: var(--white);
-  padding: 8px 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.product-action-btn:hover {
-  background-color: var(--red);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: repeat(4, 1fr);
-    /* Mantém 4 cards por linha */
+  .icons {
+    position: absolute;
+    top: 10px; /* Ajusta a posição para que o ícone fique no topo do card */
+    right: 200px; /* Fica no canto superior direito */
+    z-index: 10;
+    color: black;
   }
-
-  .item {
-    max-width: 200px;
+  
+  .icons i {
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    margin: 5px;
   }
-
-  .product-title {
-    font-size: 13px;
+  
+  .icons i:hover {
+    color: #f39c12;
   }
-
-  .product-price {
-    font-size: 13px;
+  
+  .imagem-item {
+    margin-top: 50px; /* Ajuste para afastar a imagem do topo, se necessário */
   }
-}
-
-@media (max-width: 480px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 cards por linha em telas menores */
-  }
-
-  .item {
-    max-width: 170px;
-  }
-
-  .product-title {
-    font-size: 12px;
-  }
-
-  .product-price {
-    font-size: 12px;
-  }
-}
-
-
-.informacoes h1 {
-  margin-top: 10px;
-  font-weight: 600;
-  font-size: 1.4rem;
-}
-
-.informacoes p {
-  margin-top: 2px;
-  font-size: 0.8rem;
-  color: #333;
-
-}
-
-
-
-.informacoes {
-  margin-left: 60px;
-  font-family: "Poppins", sans-serif;
-
-}
-
-.star {
-  display: grid;
-  grid-template-columns: 15px 15px 15px 15px 15px;
-}
-
-.star-compra {
-  display: flex;
-  gap: 2px;
-}
-
-.star-compra i {
-  font-size: 0.8rem;
-  color: #FCD635;
-  margin-top: 5px;
-}
-
-
-
-.botao button{
-  position: relative;
-  height: 40px;
-  width: 30vh;
-  background: #200035;
-  border-radius: 25px;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-size: 1rem;
-  font-weight: 500;
-  outline: none;
-  text-decoration: none;
-  border: none;
-  margin-top: 5px;
-  overflow: hidden; 
-  margin-right:10vh;
-}
-
-.botao button:hover{
-  background:#3E2C5B;
-  transition: 1s;
-}
-
-
-.footer{
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  background-color: #24262b;
-  padding: 70px 0;
-  margin-top: 10vh;
-}
-
-.container-footer{
-  max-width: 1170px;
-  margin: auto;
-  line-height: 1.5;
-}
-
-.footer-col{
-width: 19%;
-padding: 0 15px;
-}
-
-.footer-col h4{
-  font-size: 18px;
-  color: #ffffff;
-  text-transform: capitalize;
-  margin-bottom: 30px;
-  font-weight: 500;
-  position: relative;
-}
-
-.footer-col h4::before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  background-color: #3E2C5B;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
-
-.footer-col ul li:not(:last-child){
-margin-bottom: 10px;
-
-}
-
-.footer-col ul li a{
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 300;
-  color: #bbbbbb;
-  display: block;
-  transition: all 0.3s ease;
-}
-
-.footer-col ul li a:hover{
-  color: #ffffff;
-  padding-left: 8px;
-}
-
-.row{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.footer-col .social-links a{
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: rgba(255, 255, 255, 0.2);
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
-  transition: all 0.5s ease;
-}
-
-.footer-col .social-links a:hover{
-  color: #24262b;
-  background-color: #ffffff;
-}
-
-.container-footer ul{
-  list-style: none;
-}
-
-.social-links i{
-  color: #000;
-}
-
-/*responsive*/
-
-@media(max-width:767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-  }
-}
-
-@media(max-width:574px){
-  .footer-col{
+  
+  .imagem-produto {
     width: 100%;
+    height: auto;
+    transition: 0.3s;
   }
-}
+  .informacoes {
+    margin-top: 25px; 
+  }
+
+  .sexo-options {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .sexo-options span {
+    margin: 0 8px;
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sexo-options span:hover {
+    background-color: #ccc;
+  }
+  

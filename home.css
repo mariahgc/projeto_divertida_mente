@@ -15,6 +15,20 @@ body{
     margin-top: 40px;
 }
 
+.circulos {
+  display: flex;
+  flex-wrap: wrap; /* Opcional: deixa as imagens quebrarem linha se a tela for pequena */
+  justify-content: center; /* Centraliza as imagens no meio */
+  gap: 10px; /* Espaço entre as imagens */
+  margin: 20px 0; /* Espaçamento em cima e embaixo */
+}
+
+.imagem-circuloemocao {
+  width: 110px; /* Ou o tamanho que você quiser para as imagens */
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%; /* Deixa a imagem redonda se não estiver já */
+}
 
 .imagem-2,
 .imagem-3 {
@@ -660,11 +674,13 @@ margin-top: 50px;
     display: grid;
     grid-template-columns: 400px 700px;
     margin-left: 25vh;
-    gap: 50px;
+    gap: 130px;
     
 }
 
 .item-descricao1 img{
-    height: 500px;
-    width: 400px;
+  margin-top: 50px;
+    height: 350px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0.5, 0.5, 0.5, 0.5); /* A sombra! */
 }
