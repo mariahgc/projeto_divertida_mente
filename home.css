@@ -843,12 +843,22 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px;
+  
   margin: 40px 0;
+}
+
+.card-simples:hover{
+    transform: scale(1.02);
+    transition: 0.5s ease;
+  
+  
 }
 
 .card-simples {
   width: 200px;
   text-align: center;
+  transition: 0.5s ease;
+
 }
 
 .card-simples img {

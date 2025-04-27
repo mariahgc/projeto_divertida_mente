@@ -1,55 +1,83 @@
 /* Posiciona o ícone dentro do card e em cima da imagem */
 .item {
-    position: relative; /* Faz com que o ícone seja posicionado em relação ao card */
-  }
-  
-  .icons {
-    position: absolute;
-    top: 10px; /* Ajusta a posição para que o ícone fique no topo do card */
-    right: 200px; /* Fica no canto superior direito */
-    z-index: 10;
-    color: black;
-  }
-  
-  .icons i {
-    font-size: 25px;
-    color: #fff;
-    cursor: pointer;
-    margin: 5px;
-  }
-  
-  .icons i:hover {
-    color: #f39c12;
-  }
-  
-  .imagem-item {
-    margin-top: 50px; /* Ajuste para afastar a imagem do topo, se necessário */
-  }
-  
-  .imagem-produto {
-    width: 100%;
-    height: auto;
-    transition: 0.3s;
-  }
-  .informacoes {
-    margin-top: 25px; 
-  }
+  position: relative;
+  /* Faz com que o ícone seja posicionado em relação ao card */
+}
 
-  .sexo-options {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  .sexo-options span {
-    margin: 0 8px;
-    padding: 5px 10px;
-    background-color: #eee;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .sexo-options span:hover {
-    background-color: #ccc;
-  }
-  
+.icons {
+  position: absolute;
+  top: 10px;
+  /* Ajusta a posição para que o ícone fique no topo do card */
+  right: 200px;
+  /* Fica no canto superior direito */
+  z-index: 10;
+  color: black;
+}
+
+.icons i {
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.icons i:hover {
+  color: #f39c12;
+}
+
+.imagem-item {
+  margin-top: 50px;
+  /* Ajuste para afastar a imagem do topo, se necessário */
+}
+
+.imagem-produto {
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+}
+
+
+
+.informacoes {
+  margin-top: 25px;
+}
+
+.sexo-options {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.sexo-options span {
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 30px;
+  height: 30px;
+  border-radius: 40px;
+  text-align: center;
+  line-height: 30px;
+  /* Alinha o texto verticalmente (mesma altura do círculo) */
+  vertical-align: middle;
+  transition: 0.7s ease;
+
+}
+
+.sexo-options span:hover {
+  background-color: #200035e2;
+  transition: 0.7s ease;
+  color: #fff;
+}
+
+.sexo-options p:hover {
+  color: #fff;
+  transition: 0.7s ease;
+}
+
+.sexo-options h2 {
+  font-size: 1rem;
+  font-weight: 500;
+
+}
