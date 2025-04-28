@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <title>Favoritos</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
   <script src="favoritos.js" defer></script>
 </head>
+
 <body>
-  <header class="main-header">
-    <nav class="main-nav container">
-      <ul class="header-list-container list-container">
-        <li class="nav-item"><a href="index.html">Home</a></li>
-        <li class="nav-item"><a href="loja.html">Loja</a></li>
-        <li class="nav-item"><a href="sobre.html">Sobre</a></li>
-        <li class="nav-item"><a href="carrinho.html">Carrinho</a></li>
+  <header>
+    <nav>
+      <a class="logo" href="/">Divertidamente</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Camisa</a></li>
+        <li><a href="#">Moletom</a></li>
+        <li><a href="#">Boneco</a></li>
+        <li><a href="#">Almofada</a></li>
+        <li><a href="#">Copo</a></li>
+        <li><a href="carrinho.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        <li><a href="favoritos.html"><i class="fa-solid fa-heart"></i></a></li>
+
       </ul>
     </nav>
-    <hr>
-    <h1 class="movie-title-large movie-title">Meus Favoritos</h1>
   </header>
-
+  <h1 class="titulo">MEUS FAVORITOS <i class="fa-regular fa-heart"></i> </h1>
   <main class="main-section container">
     <div id="favoritos-list" class="product-list">
       <!-- Os produtos favoritos vão aparecer aqui -->
     </div>
-  
+
     <div class="favoritos-total-container">
-      <strong>Total Estimado:</strong>
+      <strong>TOTAL:</strong>
       <span id="favoritos-total">R$0,00</span>
     </div>
-  
+
     <div class="favoritos-actions">
       <button id="clear-favorites-button">Remover todos os favoritos</button>
     </div>
   </main>
-  
