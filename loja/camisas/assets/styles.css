@@ -11,8 +11,13 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
+.tamanho {
+  margin-top: 10px;
+  margin-bottom: -30px;
+}
+.preco {
+  margin-top: -50px;
+}
 .sizes {
   display: flex;
   margin-top: 30px;
