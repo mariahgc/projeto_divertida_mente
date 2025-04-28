@@ -510,6 +510,13 @@ font-family: "Poppins", sans-serif;
 
 
 /*FOOTER-inicio*/
+.footer-emocao {
+  margin-top: 70vh;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  background-color: #200035e2;
+  padding: 70px 0; 
+}
 .footer-ecobag-caneca {
   margin-top: 170vh;
   font-family: "Poppins", sans-serif;
