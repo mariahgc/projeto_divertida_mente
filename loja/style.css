@@ -16,11 +16,17 @@
   }
   
   .logo {
-    font-size: 24px;
+
     text-transform: uppercase;
     letter-spacing: 4px;
   }
-  
+.principal {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+
+}
   nav {
     display: flex;
     position: relative;
@@ -504,16 +510,27 @@ font-family: "Poppins", sans-serif;
 
 
 /*FOOTER-inicio*/
-
+.footer-ecobag-caneca {
+  margin-top: 170vh;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  background-color: #200035e2;
+  padding: 70px 0;
+  
+}
 .footer{
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  background-color: #24262b;
+  background-color: #200035e2;
   padding: 70px 0;
-  margin-top: 10vh;
+  margin-top: 350vh;
 }
-
-.container-footer{
+.container-footer-ecobag-caneca {
+  max-width: 1170px;
+  margin: auto;
+  line-height: 1.5;
+}
+.container-footer {
   max-width: 1170px;
   margin: auto;
   line-height: 1.5;
