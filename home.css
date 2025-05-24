@@ -2,6 +2,7 @@
 
 * {
   margin: 0;
+
 }
 
 body {
@@ -29,7 +30,6 @@ body {
   animation: animation1 3s forwards;
   animation-delay: 1s;
   /* Espera 2 segundos para começar */
-
 
 }
 
@@ -110,12 +110,8 @@ nav {
   align-items: center;
   background-color: transparent;
   height: 8vh;
-  border-radius: 20px;
   margin-top: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
   z-index: 1;
-
   opacity: 0;
   /* Começa invisível */
   animation: aparecer 1s forwards;
@@ -153,7 +149,6 @@ nav {
 }
 
 .logo {
-  margin-left: 20vh;
   font-size: 1.6rem;
   text-decoration: none;
   color: #f5f3f3de;
@@ -289,7 +284,7 @@ nav {
 
 
 
-#next,
+#next,|
 #prev {
   position: absolute;
   /* Garante que os botões fiquem posicionados dentro da 'slider' */
@@ -972,4 +967,240 @@ gap: 20px;
   margin-top: 35px;
   margin-left: 160px;
 
+}
+
+
+
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  height: 8vh;
+  width: 46vh;
+  margin-left: 70px;
+}
+
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+ 
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: #24262b;
+    height: 8vh;
+    width: 46vh;
+    margin-left: 0;
+
+  }
+
+  .nav-list{
+    margin-left: 0;
+  }
+
+  .item{
+    display: none;
+
+  }
+
+  
+#next,
+#prev{
+  display: none;
+}
+
+  .descricao-detalhada {
+    display: block; /* ou flex, ou none, dependendo do que você quer */
+    gap: 50px;
+    margin-top: -65vh;
+    margin-left: 5px;
+    background-color: #362D73;
+    width: 44vh;
+    border-radius: 10px;
+    height: 65vh;
+  }
+  
+  .area-cards-simples{
+    display: grid;
+    grid-template-columns: 170px 100px ;
+    width: 100%;
+    margin-left: -50px;
+  }
+  
+
+  .informacoes-anuncio{
+    display: none;
+  }
+
+  .linha1, .linha2{
+    display: none;
+  }
+
+  .detalhes{
+    display: none;
+    
+  }
+
+
+  .imagem-circuloemocao{
+    width: 70px;
+    height: 70px;
+  }
+
+  .lancamentos{
+    display: none;
+  }
+
+  .descricao-detalhada button {
+    width: 350px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: -120px;
+    border: none;
+    font-size: 1rem;
+    color: #362D73;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    font-weight: 700;
+  }
+  
+  .descricao-detalhada button:hover {
+    transform: scale(1.02);
+    transition: 0.5s;
+   
+  }
+
+  .descricao-detalhada h1{
+    margin-left: -120px;
+    width: 40vh;
+  }
+
+  .item-descricao2 p{
+    margin-left: -120px;
+    width: 35vh;
+  }
+
+
+  
+
+  .imagem-1 {
+    width: 100%;
+    height: 96vh;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+
+  .imagem-2 {
+    width: 90%;
+    margin-left: 2%;
+    top: 60px;
+  }
+
+  .imagem-3 {
+    width: 90%;
+    margin-left: 2%;
+    top:340px;
+  }
+
+  .imagem-2,
+  .imagem-3 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza horizontalmente */
+  } 
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: -1px;
+    width: 50vw;
+    height: 92vh;
+    background: #24262b;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(120%);
+    transition: transform 0.3s ease-in;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+
+  .descricao-inicio {
+    position: absolute;
+    margin-left: 5%;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .descricao-inicio p {
+    width: 40vh;
+    margin-top: 30px;
+  }
+}
+
+
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+@media (max-width: 999px) {
+  img {
+    animation: none !important;
+  }
 }
